@@ -1,6 +1,7 @@
 <h1>Shadowbringers Resistance Weapons</h1>
 <p>...Introduction to the details of the resistance weapon quests here...</p>
 
+<!-- Before you Begin -->
 <div class="panel panel-default">
   <div class="panel-heading">Before You Begin...</div>
   <div class="panel-body">
@@ -15,8 +16,12 @@
       </thead>
       <tbody>
         <tr>
-          <td>"Shadowbringers" - Lvl 80</td>
-          <td>"The City of Lost Angels" - Lvl 70</td>
+          <td>
+            <app-quest [icon]="'msq_quest'">Shadowbringers - Lvl 80</app-quest>
+          </td>
+          <td>
+            <app-quest [icon]="'blue_plus'">The City of Lost Angels - Lvl 70</app-quest>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -37,10 +42,13 @@
 <div class="row">
 
   <!-- Fire in the Forge Quest -->
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-xs-12">
     <div class="panel panel-default">
-      <div class="panel-heading">"Fire in the Forge" - One time only</div>
+      <div class="panel-heading">
+        <app-quest [icon]="'blue_plus'" [isHeading]="true">Fire in the Forge</app-quest>
+      </div>
       <div class="panel-body">
+        <img class="quest-banner" src="../../assets/shb-banners/Resistance1.jpg" alt="">
 
         <table class="table table-bordered">
           <tbody>
@@ -54,7 +62,11 @@
             </tr>
             <tr>
               <th>Previous Quest</th>
-              <td>The Bozja Incident</td>
+              <td>
+                <app-quest [icon]="'blue_plus'">Hail to the Queen</app-quest>
+                <app-quest [icon]="'blue_plus'">Path to the Past</app-quest>
+                <app-quest [icon]="'blue_plus'">The Bozja Incident</app-quest>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -65,7 +77,7 @@
           <div class="col-xs-12">
             <div class="media">
               <div class="media-left">
-                <img src="../../assets/shb-icons/scalepowder.png" alt="Thavnairian Scalepowder Icon"
+                <img src="../../assets/shb-icons/scalepowder.jpg" alt="Thavnairian Scalepowder Icon"
                   class="media-object">
               </div>
               <div class="media-body">
@@ -85,9 +97,11 @@
   </div>
 
   <!-- Resistance is (Not) Futile Quest -->
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-xs-12">
     <div class="panel panel-default">
-      <div class="panel-heading">"Resistance is (Not) Futile" - Repeatable</div>
+      <div class="panel-heading">
+        <app-quest [icon]="'blue_plus_repeat'" [isHeading]="true">Resistance is (Not) Futile</app-quest>
+      </div>
       <div class="panel-body">
 
         <table class="table table-bordered">
@@ -102,7 +116,9 @@
             </tr>
             <tr>
               <th>Previous Quest</th>
-              <td>Fire in the Forge</td>
+              <td>
+                <app-quest [icon]="'blue_plus'">Fire in the Forge</app-quest>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -114,7 +130,7 @@
           <div class="col-xs-12">
             <div class="media">
               <div class="media-left">
-                <img src="../../assets/shb-icons/scalepowder.png" alt="Thavnairian Scalepowder Icon"
+                <img src="../../assets/shb-icons/scalepowder.jpg" alt="Thavnairian Scalepowder Icon"
                   class="media-object">
               </div>
               <div class="media-body">
@@ -147,205 +163,7 @@
       <div class="panel-heading">Resistance Weapons (iLvl 485)</div>
       <div class="panel-body">
         <div class="row">
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Honorbound.png" alt="Honorbound Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Honorbound (PLD)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Tenacity.png" alt="Tenacity Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Tenacity (PLD)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Skullrender.png" alt="Skullrender Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Skullrender (WAR)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Woeborn.png" alt="Woeborn Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Woeborn (DRK)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Crownsblade.png" alt="Crownsblade Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Crownsblade (GNB)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Ingrimm.png" alt="Ingrimm Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Ingrimm (WHM)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Akademos.png" alt="Akademos Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Akademos (SCH)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Solstice.png" alt="Solstice Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Solstice (AST)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Samsara.png" alt="Samsara Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Samsara (MNK)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Dreizack.png" alt="Dreizack Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Dreizack (DRG)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Honeshirazu.png" alt="Honeshirazu Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Honeshirazu (NIN)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Hoshikiri.png" alt="Hoshikiri Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Hoshikiri (SAM)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Brilliance.png" alt="Brilliance Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Brilliance (BRD)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Lawman.png" alt="Lawman Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Lawman (MCH)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Enchufla.png" alt="Enchufla Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Enchufla (DNC)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Soulscourge.png" alt="Soulscourge Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Soulscourge (BLM)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Espiritus.png" alt="Espiritus Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Espiritus (SMN)</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Talekeeper.png" alt="Talekeeper Icon" class="media-object">
-              </div>
-              <div class="media-body">
-                <p>Talekeeper (RDM)</p>
-              </div>
-            </div>
-          </div>
-
+          <app-weapon-list [iLvl]="'485'"></app-weapon-list>
         </div>
       </div>
     </div>
@@ -357,10 +175,15 @@
 
 <!-- Step 2 - iLvl 500 -->
 <h2>Augmented Resistance Weapons (iLvl 500)</h2>
+<p>The next part in the Resistance Weapons questline requires that you complete...</p>
 <div class="row">
+  <!-- For Want of a Memory Quest -->
   <div class="col-xs-12">
     <div class="panel panel-default">
-      <div class="panel-heading">"For Want of a Memory" - Repeatable</div>
+      <div class="panel-heading">
+        <img class="quest-icon" src="../../assets/shared/blue_plus_repeat.jpg" alt="">
+        "For Want of a Memory"
+      </div>
       <div class="panel-body">
 
         <table class="table table-bordered">
@@ -375,7 +198,14 @@
             </tr>
             <tr>
               <th>Previous Quest</th>
-              <td>A Sober Proposal</td>
+              <td>
+                <img class="quest-icon" src="../../assets/shared/msq_quest.jpg" alt="">
+                "Vows of Virtue, Deeds of Cruelty"<br>
+                <img class="quest-icon" src="../../assets/shared/blue_plus.jpg" alt="">
+                "Where Eagles Nest"<br>
+                <img class="quest-icon" src="../../assets/shared/blue_plus.jpg" alt="">
+                "A Sober Proposal"
+              </td>
             </tr>
           </tbody>
         </table>
@@ -389,7 +219,7 @@
           <div class="col-xs-12 col-sm-4">
             <div class="media">
               <div class="media-left">
-                <img src="../../assets/shb-icons/Tortured.png" alt="Tortured Memory of the Dying Icon"
+                <img src="../../assets/shb-icons/Tortured.jpg" alt="Tortured Memory of the Dying Icon"
                   class="media-object">
               </div>
               <div class="media-body">
@@ -411,7 +241,7 @@
           <div class="col-xs-12 col-sm-4">
             <div class="media">
               <div class="media-left">
-                <img src="../../assets/shb-icons/Sorrowful.png" alt="Sorrowful Memory of the Dying Icon"
+                <img src="../../assets/shb-icons/Sorrowful.jpg" alt="Sorrowful Memory of the Dying Icon"
                   class="media-object">
               </div>
               <div class="media-body">
@@ -433,7 +263,7 @@
           <div class="col-xs-12 col-sm-4">
             <div class="media">
               <div class="media-left">
-                <img src="../../assets/shb-icons/Harrowing.png" alt="Harrowing Memory of the Dying Icon"
+                <img src="../../assets/shb-icons/Harrowing.jpg" alt="Harrowing Memory of the Dying Icon"
                   class="media-object">
               </div>
               <div class="media-body">
@@ -450,12 +280,31 @@
 
         <hr>
 
-        <p>Deliver the 20 of each Memory of the Dying and the Resistance weapon from the previous step.</p>
+        <p>Deliver the Memories of the Dying and the Resistance weapon from the previous step.</p>
 
       </div>
     </div>
   </div>
+
+  <!-- Resistance Weapons iLvl 500 List -->
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Resistance Weapons (iLvl 500)</div>
+      <div class="panel-body">
+        <div class="row">
+
+          <app-weapon-list [iLvl]="'500'"></app-weapon-list>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<hr>
+
+
 <br>
 <br>
 <br>

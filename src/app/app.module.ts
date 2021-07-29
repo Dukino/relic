@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { ShbRelicComponent } from './shb-relic/shb-relic.component';
 import { HomeComponent } from './home/home.component';
+import { QuestComponent } from './quest/quest.component';
+import { WeaponListComponent } from './weapon-list/weapon-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
     ShbRelicComponent,
-    HomeComponent
+    HomeComponent,
+    QuestComponent,
+    WeaponListComponent
   ],
   imports: [
     BrowserModule,
