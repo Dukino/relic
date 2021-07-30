@@ -45,7 +45,12 @@
         <app-quest [icon]="'blue_plus'" [isHeading]="true">Fire in the Forge</app-quest>
       </div>
       <div class="panel-body">
+        <div class="alert alert-warning">
+          This step only happens once! All additional weapons have to be done through the quest "Resistance is (Not)
+          Futile"
+        </div>
         <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
+        <br>
 
         <table class="table table-bordered">
           <tbody>
@@ -72,21 +77,8 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/scalepowder.jpg" alt="Thavnairian Scalepowder Icon"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>1 Thavnairian Scalepowder</p>
-              </div>
-            </div>
+            <app-item [icon]="'scalepowder'" [quantity]="'1'">Thavnairian Scalepowder</app-item>
           </div>
-        </div>
-
-        <div class="alert alert-warning">
-          This step only happens once! All additional weapons have to be done through the quest "Resistance is (Not)
-          Futile"
         </div>
 
       </div>
@@ -99,6 +91,8 @@
         <app-quest [icon]="'blue_plus_repeat'" [isHeading]="true">Resistance is (Not) Futile</app-quest>
       </div>
       <div class="panel-body">
+        <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
+        <br>
 
         <table class="table table-bordered">
           <tbody>
@@ -124,17 +118,10 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/scalepowder.jpg" alt="Thavnairian Scalepowder Icon"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>4 Thavnairian Scalepowder</p>
-              </div>
-            </div>
+            <app-item [icon]="'scalepowder'" [quantity]="'4'">Thavnairian Scalepowder</app-item>
           </div>
         </div>
+        <br>
 
         <!-- Vendors -->
         <ul class="list-group">
@@ -158,24 +145,24 @@
       <div class="panel-heading">Resistance Weapons (iLvl 485)</div>
       <div class="panel-body">
         <div class="row">
-            <app-weapon [icon]="'Honorbound'">Honorbound (PLD)</app-weapon>
-            <app-weapon [icon]="'Tenacity'">Tenacity (PLD)</app-weapon>
-            <app-weapon [icon]="'Skullrender'">Skullrender (WAR)</app-weapon>
-            <app-weapon [icon]="'Woeborn'">Woeborn (DRK)</app-weapon>
-            <app-weapon [icon]="'Crownsblade'">Crownsblade (GNB)</app-weapon>
-            <app-weapon [icon]="'Ingrimm'">Ingrimm (WHM)</app-weapon>
-            <app-weapon [icon]="'Akademos'">Akademos (SCH)</app-weapon>
-            <app-weapon [icon]="'Solstice'">Solstice (AST)</app-weapon>
-            <app-weapon [icon]="'Samsara'">Samsara (MNK)</app-weapon>
-            <app-weapon [icon]="'Dreizack'">Dreizack (DRG)</app-weapon>
-            <app-weapon [icon]="'Honeshirazu'">Honeshirazu (NIN)</app-weapon>
-            <app-weapon [icon]="'Hoshikiri'">Hoshikiri (SAM)</app-weapon>
-            <app-weapon [icon]="'Brilliance'">Brilliance (BRD)</app-weapon>
-            <app-weapon [icon]="'Lawman'">Lawman (MCH)</app-weapon>
-            <app-weapon [icon]="'Enchufla'">Enchufla (DNC)</app-weapon>
-            <app-weapon [icon]="'Soulscourge'">Soulscourge (BLM)</app-weapon>
-            <app-weapon [icon]="'Espiritus'">Espiritus (SMN)</app-weapon>
-            <app-weapon [icon]="'Talekeeper'">Talekeeper (RDM)</app-weapon>
+          <app-weapon [icon]="'Honorbound'">Honorbound (PLD)</app-weapon>
+          <app-weapon [icon]="'Tenacity'">Tenacity (PLD)</app-weapon>
+          <app-weapon [icon]="'Skullrender'">Skullrender (WAR)</app-weapon>
+          <app-weapon [icon]="'Woeborn'">Woeborn (DRK)</app-weapon>
+          <app-weapon [icon]="'Crownsblade'">Crownsblade (GNB)</app-weapon>
+          <app-weapon [icon]="'Ingrimm'">Ingrimm (WHM)</app-weapon>
+          <app-weapon [icon]="'Akademos'">Akademos (SCH)</app-weapon>
+          <app-weapon [icon]="'Solstice'">Solstice (AST)</app-weapon>
+          <app-weapon [icon]="'Samsara'">Samsara (MNK)</app-weapon>
+          <app-weapon [icon]="'Dreizack'">Dreizack (DRG)</app-weapon>
+          <app-weapon [icon]="'Honeshirazu'">Honeshirazu (NIN)</app-weapon>
+          <app-weapon [icon]="'Hoshikiri'">Hoshikiri (SAM)</app-weapon>
+          <app-weapon [icon]="'Brilliance'">Brilliance (BRD)</app-weapon>
+          <app-weapon [icon]="'Lawman'">Lawman (MCH)</app-weapon>
+          <app-weapon [icon]="'Enchufla'">Enchufla (DNC)</app-weapon>
+          <app-weapon [icon]="'Soulscourge'">Soulscourge (BLM)</app-weapon>
+          <app-weapon [icon]="'Espiritus'">Espiritus (SMN)</app-weapon>
+          <app-weapon [icon]="'Talekeeper'">Talekeeper (RDM)</app-weapon>
         </div>
       </div>
     </div>
@@ -191,10 +178,11 @@
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <img class="quest-icon" src="../../assets/shared/blue_plus_repeat.jpg" alt="">
-        "For Want of a Memory"
+        <app-quest [icon]="'blue_plus_repeat'" [isHeading]="true">For Want of a Memory</app-quest>
       </div>
       <div class="panel-body">
+        <img class="quest-banner" src="../../assets/banners/Resistance2.jpg" alt="">
+        <br>
 
         <table class="table table-bordered">
           <tbody>
@@ -207,14 +195,11 @@
               <td>Gangos (x:6.1, y:4.9)</td>
             </tr>
             <tr>
-              <th>Previous Quest</th>
+              <th>Previous Quests</th>
               <td>
-                <img class="quest-icon" src="../../assets/shared/msq_quest.jpg" alt="">
-                "Vows of Virtue, Deeds of Cruelty"<br>
-                <img class="quest-icon" src="../../assets/shared/blue_plus.jpg" alt="">
-                "Where Eagles Nest"<br>
-                <img class="quest-icon" src="../../assets/shared/blue_plus.jpg" alt="">
-                "A Sober Proposal"
+                <app-quest [icon]="'msq_quest'">Vows of Virtue, Deeds of Cruelty</app-quest>
+                <app-quest [icon]="'blue_plus'">Where Eagles Nest</app-quest>
+                <app-quest [icon]="'blue_plus'">A Sober Proposal</app-quest>
               </td>
             </tr>
           </tbody>
@@ -227,15 +212,7 @@
         <!-- Tortured Memory of the Dying -->
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Tortured.jpg" alt="Tortured Memory of the Dying Icon"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>20 Tortured Memory of the Dying</p>
-              </div>
-            </div>
+            <app-item [icon]="'Tortured'" [quantity]="'20'">Tortured Memory of the Dying</app-item>
           </div>
 
           <div class="col-xs-12 col-sm-8">
@@ -249,15 +226,7 @@
         <!-- Sorrowful Memory of the Dying -->
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Sorrowful.jpg" alt="Sorrowful Memory of the Dying Icon"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>20 Sorrowful Memory of the Dying</p>
-              </div>
-            </div>
+            <app-item [icon]="'Sorrowful'" [quantity]="'20'">Sorrowful Memory of the Dying</app-item>
           </div>
 
           <div class="col-xs-12 col-sm-8">
@@ -271,15 +240,7 @@
         <!-- Harrowing Memory of the Dying -->
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="media">
-              <div class="media-left">
-                <img src="../../assets/shb-icons/Harrowing.jpg" alt="Harrowing Memory of the Dying Icon"
-                  class="media-object">
-              </div>
-              <div class="media-body">
-                <p>20 Harrowing Memory of the Dying</p>
-              </div>
-            </div>
+            <app-item [icon]="'Harrowing'" [quantity]="'20'">Harrowing Memory of the Dying</app-item>
           </div>
 
           <div class="col-xs-12 col-sm-8">
@@ -301,24 +262,24 @@
       <div class="panel-heading">Augmented Resistance Weapons (iLvl 500)</div>
       <div class="panel-body">
         <div class="row">
-            <app-weapon [icon]="'Honorbound'">Augmented Honorbound (PLD)</app-weapon>
-            <app-weapon [icon]="'Tenacity'">Augmented Tenacity (PLD)</app-weapon>
-            <app-weapon [icon]="'Skullrender'">Augmented Skullrender (WAR)</app-weapon>
-            <app-weapon [icon]="'Woeborn'">Augmented Woeborn (DRK)</app-weapon>
-            <app-weapon [icon]="'Crownsblade'">Augmented Crownsblade (GNB)</app-weapon>
-            <app-weapon [icon]="'Ingrimm'">Augmented Ingrimm (WHM)</app-weapon>
-            <app-weapon [icon]="'Akademos'">Augmented Akademos (SCH)</app-weapon>
-            <app-weapon [icon]="'Solstice'">Augmented Solstice (AST)</app-weapon>
-            <app-weapon [icon]="'Samsara'">Augmented Samsara (MNK)</app-weapon>
-            <app-weapon [icon]="'Dreizack'">Augmented Dreizack (DRG)</app-weapon>
-            <app-weapon [icon]="'Honeshirazu'">Augmented Honeshirazu (NIN)</app-weapon>
-            <app-weapon [icon]="'Hoshikiri'">Augmented Hoshikiri (SAM)</app-weapon>
-            <app-weapon [icon]="'Brilliance'">Augmented Brilliance (BRD)</app-weapon>
-            <app-weapon [icon]="'Lawman'">Augmented Lawman (MCH)</app-weapon>
-            <app-weapon [icon]="'Enchufla'">Augmented Enchufla (DNC)</app-weapon>
-            <app-weapon [icon]="'Soulscourge'">Augmented Soulscourge (BLM)</app-weapon>
-            <app-weapon [icon]="'Espiritus'">Augmented Espiritus (SMN)</app-weapon>
-            <app-weapon [icon]="'Talekeeper'">Augmented Talekeeper (RDM)</app-weapon>
+          <app-weapon [icon]="'Honorbound'">Augmented Honorbound (PLD)</app-weapon>
+          <app-weapon [icon]="'Tenacity'">Augmented Tenacity (PLD)</app-weapon>
+          <app-weapon [icon]="'Skullrender'">Augmented Skullrender (WAR)</app-weapon>
+          <app-weapon [icon]="'Woeborn'">Augmented Woeborn (DRK)</app-weapon>
+          <app-weapon [icon]="'Crownsblade'">Augmented Crownsblade (GNB)</app-weapon>
+          <app-weapon [icon]="'Ingrimm'">Augmented Ingrimm (WHM)</app-weapon>
+          <app-weapon [icon]="'Akademos'">Augmented Akademos (SCH)</app-weapon>
+          <app-weapon [icon]="'Solstice'">Augmented Solstice (AST)</app-weapon>
+          <app-weapon [icon]="'Samsara'">Augmented Samsara (MNK)</app-weapon>
+          <app-weapon [icon]="'Dreizack'">Augmented Dreizack (DRG)</app-weapon>
+          <app-weapon [icon]="'Honeshirazu'">Augmented Honeshirazu (NIN)</app-weapon>
+          <app-weapon [icon]="'Hoshikiri'">Augmented Hoshikiri (SAM)</app-weapon>
+          <app-weapon [icon]="'Brilliance'">Augmented Brilliance (BRD)</app-weapon>
+          <app-weapon [icon]="'Lawman'">Augmented Lawman (MCH)</app-weapon>
+          <app-weapon [icon]="'Enchufla'">Augmented Enchufla (DNC)</app-weapon>
+          <app-weapon [icon]="'Soulscourge'">Augmented Soulscourge (BLM)</app-weapon>
+          <app-weapon [icon]="'Espiritus'">Augmented Espiritus (SMN)</app-weapon>
+          <app-weapon [icon]="'Talekeeper'">Augmented Talekeeper (RDM)</app-weapon>
         </div>
       </div>
     </div>
@@ -326,7 +287,19 @@
 </div>
 <hr>
 
+<!-- Step 3 - iLvl 500 -->
+<h2>Recollection Weapons (iLvl 500)</h2>
+<p>The next part in the Resistance Weapons questline requires that you complete...</p>
+<div class="row">
+  <!-- The Will to Resist Quest -->
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
 
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <br>

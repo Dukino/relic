@@ -8,6 +8,7 @@ import { ShbRelicComponent } from './shb-relic/shb-relic.component';
 import { HomeComponent } from './home/home.component';
 import { QuestComponent } from './quest/quest.component';
 import { WeaponComponent } from './weapon/weapon.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WeaponComponent } from './weapon/weapon.component';
     ShbRelicComponent,
     HomeComponent,
     QuestComponent,
-    WeaponComponent
+    WeaponComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
