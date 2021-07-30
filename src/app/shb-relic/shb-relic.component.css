@@ -10,3 +10,9 @@ img.quest-icon {
   display: block;
   margin: 0 auto;
 }
+
+.table-50 td,
+.table-50 th {
+    width: 50%;
+}
+

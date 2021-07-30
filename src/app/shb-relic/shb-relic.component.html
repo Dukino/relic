@@ -6,24 +6,28 @@
   <div class="panel-body">
     <p>Before you can begin the grind for your Resistance Weapons, you must complete the following quests for the Main
       Scenario Quests and Side Quests.</p>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Main Scenario Quest Requirement</th>
-          <th>Side Quest Requirement</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <app-quest [icon]="'msq_quest'">Shadowbringers - Lvl 80</app-quest>
-          </td>
-          <td>
-            <app-quest [icon]="'blue_plus'">The City of Lost Angels - Lvl 70</app-quest>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="table-responsive table-50">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Main Scenario Quest Requirement</th>
+            <th>Side Quest Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <app-quest [icon]="'msq_quest'">Shadowbringers - Lvl 80</app-quest>
+            </td>
+            <td>
+              <app-quest [icon]="'blue_plus'">The City of Lost Angels - Lvl 70</app-quest>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <p>The side quest "The City of Lost Angels" is part of a quest chain for the Alliance Raids for Stormblood. You must
       complete each side story quest for this questline that ends with "The City of Lost Angels" in order to have access
       to the Resistance Weapon quests.</p>
@@ -52,34 +56,53 @@
         <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
         <br>
 
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th>Quest Giver</th>
-              <td>Gerolt</td>
-            </tr>
-            <tr>
-              <th>Location</th>
-              <td>Gangos (x:6.3, y:5.0)</td>
-            </tr>
-            <tr>
-              <th>Previous Quest</th>
-              <td>
-                <app-quest [icon]="'blue_plus'">Hail to the Queen</app-quest>
-                <app-quest [icon]="'blue_plus'">Path to the Past</app-quest>
-                <app-quest [icon]="'blue_plus'">The Bozja Incident</app-quest>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>Deliver 1 Thavnairian Scalepowder, obtained through the quest for free, to Gerolt in Gangos.</p>
-
-        <div class="row">
-          <div class="col-xs-12">
-            <app-item [icon]="'scalepowder'" [quantity]="'1'">Thavnairian Scalepowder</app-item>
-          </div>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Gerolt</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.3, y:5.0)</td>
+              </tr>
+              <tr>
+                <th>Previous Quest</th>
+                <td>
+                  <app-quest [icon]="'blue_plus'">Hail to the Queen</app-quest>
+                  <app-quest [icon]="'blue_plus'">Path to the Past</app-quest>
+                  <app-quest [icon]="'blue_plus'">The Bozja Incident</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item [icon]="'scalepowder'" [quantity]="'1'">Thavnairian Scalepowder</app-item>
+                </td>
+                <td>
+                  <p>Given for free through quest.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Turn in</h3>
+        <p>Deliver 1 Thavnairian Scalepowder to Gerolt in Gangos.</p>
 
       </div>
     </div>
@@ -94,34 +117,50 @@
         <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
         <br>
 
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th>Quest Giver</th>
-              <td>Zlatan</td>
-            </tr>
-            <tr>
-              <th>Location</th>
-              <td>Gangos (x:6.3, y:5.1)</td>
-            </tr>
-            <tr>
-              <th>Previous Quest</th>
-              <td>
-                <app-quest [icon]="'blue_plus'">Fire in the Forge</app-quest>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>Purchase 4 Thavnairian Scalepowder for 1000 Allagan Tomestones of Poetics (250 each) from any of the
-          following vendors:</p>
-
-        <div class="row">
-          <div class="col-xs-12">
-            <app-item [icon]="'scalepowder'" [quantity]="'4'">Thavnairian Scalepowder</app-item>
-          </div>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Zlatan</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.3, y:5.1)</td>
+              </tr>
+              <tr>
+                <th>Previous Quest</th>
+                <td>
+                  <app-quest [icon]="'blue_plus'">Fire in the Forge</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <br>
+
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item [icon]="'scalepowder'" [quantity]="'4'">Thavnairian Scalepowder</app-item>
+                </td>
+                <td>
+                  <p>Purchased for 1000 Allagan Tomestones of Poetics (250 each).</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Thavnairian Scalepowder can be obtained from the following vendors:</p>
 
         <!-- Vendors -->
         <ul class="list-group">
@@ -134,6 +173,7 @@
           <li class="list-group-item">Rowena's Representative - Kugane (x:12.2, y:10.8)</li>
         </ul>
 
+        <h3>Turn in</h3>
         <p>Deliver 4 Thavnairian Scalepowder to Zlatan in Gangos.</p>
 
       </div>
@@ -184,74 +224,75 @@
         <img class="quest-banner" src="../../assets/banners/Resistance2.jpg" alt="">
         <br>
 
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th>Quest Giver</th>
-              <td>Zlatan</td>
-            </tr>
-            <tr>
-              <th>Location</th>
-              <td>Gangos (x:6.1, y:4.9)</td>
-            </tr>
-            <tr>
-              <th>Previous Quests</th>
-              <td>
-                <app-quest [icon]="'msq_quest'">Vows of Virtue, Deeds of Cruelty</app-quest>
-                <app-quest [icon]="'blue_plus'">Where Eagles Nest</app-quest>
-                <app-quest [icon]="'blue_plus'">A Sober Proposal</app-quest>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>Obtain 60 total Memories of the Dying of 3 different varieties. Details are below:</p>
-
-        <hr>
-
-        <!-- Tortured Memory of the Dying -->
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <app-item [icon]="'Tortured'" [quantity]="'20'">Tortured Memory of the Dying</app-item>
-          </div>
-
-          <div class="col-xs-12 col-sm-8">
-            <p>Achieving Gold for FATEs in Coerthas Western Highlands and Sea of Clouds</p>
-            <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 1 of The Bozjan Southern Front</p>
-          </div>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Zlatan</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.1, y:4.9)</td>
+              </tr>
+              <tr>
+                <th>Previous Quests</th>
+                <td>
+                  <app-quest [icon]="'msq_quest'">Vows of Virtue, Deeds of Cruelty</app-quest>
+                  <app-quest [icon]="'blue_plus'">Where Eagles Nest</app-quest>
+                  <app-quest [icon]="'blue_plus'">A Sober Proposal</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <hr>
-
-        <!-- Sorrowful Memory of the Dying -->
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <app-item [icon]="'Sorrowful'" [quantity]="'20'">Sorrowful Memory of the Dying</app-item>
-          </div>
-
-          <div class="col-xs-12 col-sm-8">
-            <p>Achieving Gold for FATEs in Dravanian Forelands and Churning Mists</p>
-            <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 2 of The Bozjan Southern Front</p>
-          </div>
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item [icon]="'Tortured'" [quantity]="'20'">Tortured Memory of the Dying</app-item>
+                </td>
+                <td>
+                  <p>Achieving Gold for FATEs in Coerthas Western Highlands and Sea of Clouds</p>
+                  <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 1 of The Bozjan Southern
+                    Front</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <app-item [icon]="'Sorrowful'" [quantity]="'20'">Sorrowful Memory of the Dying</app-item>
+                </td>
+                <td>
+                  <p>Achieving Gold for FATEs in Dravanian Forelands and Churning Mists</p>
+                  <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 2 of The Bozjan Southern
+                    Front</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <app-item [icon]="'Harrowing'" [quantity]="'20'">Harrowing Memory of the Dying</app-item>
+                </td>
+                <td>
+                  <p>Achieving Gold for FATEs in Dravanian Hinterlands and Azys Lla</p>
+                  <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 3 of The Bozjan Southern
+                    Front</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <hr>
-
-        <!-- Harrowing Memory of the Dying -->
-        <div class="row">
-          <div class="col-xs-12 col-sm-4">
-            <app-item [icon]="'Harrowing'" [quantity]="'20'">Harrowing Memory of the Dying</app-item>
-          </div>
-
-          <div class="col-xs-12 col-sm-8">
-            <p>Achieving Gold for FATEs in Dravanian Hinterlands and Azys Lla</p>
-            <p>Random drop from Skirmishes, Critical Engagements, and enemies in zone 3 of The Bozjan Southern Front</p>
-          </div>
-        </div>
-
-        <hr>
-
-        <p>Deliver the Memories of the Dying and the Resistance weapon from the previous step.</p>
+        <h3>Turn in</h3>
+        <p>With your Resistance Weapon in your inventory, deliver the 60 Memories of the Dying to Zlatan in Gangos.</p>
 
       </div>
     </div>
@@ -295,6 +336,61 @@
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-heading">
+        <app-quest [icon]="'blue_plus_repeat'" [isHeading]="true">The Will to Resist</app-quest>
+      </div>
+      <div class="panel-body">
+        <img class="quest-banner" src="../../assets/banners/Resistance3.jpg" alt="">
+        <br>
+
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Zlatan</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.1, y:4.9)</td>
+              </tr>
+              <tr>
+                <th>Previous Quests</th>
+                <td>
+                  <app-quest [icon]="'blue_plus_repeat'">For Want of a Memory</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item [icon]="'Bitter'" [quantity]="'6'">Bitter Memory of the Dying</app-item>
+                </td>
+                <td>
+                  <p>Level 60 Dungeons (Level-Synced)</p>
+                  <p>Duty Roulette: Leveling (Once a day)</p>
+                  <p>Random drops from enemies in The Bozjan Southern Front</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Turn in</h3>
+        <p>With your Augmented Resistance Weapon in your inventory, deliver the 6 Bitter Memories of the Dying to Zlatan
+          in Gangos.</p>
+
 
       </div>
     </div>
