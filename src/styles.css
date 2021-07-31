@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #333333;
 }
@@ -6,5 +10,34 @@ body {
 body > app-root > .container > .row > div > app-shb-relic > p,
 body > app-root > .container > .row > div > app-shb-relic > h1,
 body > app-root > .container > .row > div > app-shb-relic > h2 {
+    color: white;
+}
+
+h1, h2, p {
+    color: white;
+}
+
+.panel p {
+    color: black;
+}
+
+.side-nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-nav li {
+    list-style: none;
+}
+
+.side-nav a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+.side-nav li:hover,
+.side-nav li:hover * {
+    background-color: #333333;
     color: white;
 }
