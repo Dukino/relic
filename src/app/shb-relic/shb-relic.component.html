@@ -452,10 +452,10 @@
               <tr>
                 <th>Previous Quests</th>
                 <td>
-                    <app-quest icon="blue_plus_repeat">The Will to Resist</app-quest>
-                    <app-quest icon="blue_plus">A Sign of What's to Come</app-quest>
-                    <app-quest icon="blue_plus">Fit for a Queen</app-quest>
-                    <app-quest icon="blue_plus">In the Queen's Image</app-quest>
+                  <app-quest icon="blue_plus_repeat">The Will to Resist</app-quest>
+                  <app-quest icon="blue_plus">A Sign of What's to Come</app-quest>
+                  <app-quest icon="blue_plus">Fit for a Queen</app-quest>
+                  <app-quest icon="blue_plus">In the Queen's Image</app-quest>
                 </td>
               </tr>
             </tbody>
@@ -464,26 +464,27 @@
 
         <h3>Acquisition</h3>
         <div class="table-responsive table-50">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>What to get</th>
-                        <th>How to get</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <app-item icon="Loathsome" quantity="15">Loathsome Memories of the Dying</app-item>
-                        </td>
-                        <td>
-                            <p>5 guaranteed from completing Castrum Lacus Litore.</p>
-                            <p>1 guaranteed from completing any of the alliance raids from the "Crystal Tower" series (level-synced).</p>
-                            <p>1 randomly from completing critical engagements in The Bozjan Southern Front.</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item icon="Loathsome" quantity="15">Loathsome Memories of the Dying</app-item>
+                </td>
+                <td>
+                  <p>5 guaranteed from completing Castrum Lacus Litore.</p>
+                  <p>1 guaranteed from completing any of the alliance raids from the "Crystal Tower" series
+                    (level-synced).</p>
+                  <p>1 randomly from completing critical engagements in The Bozjan Southern Front.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <h3>Turn in</h3>
@@ -492,7 +493,7 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Law's Order Weapons - iLvl 510 List -->
   <div class="col-xs-12">
     <div class="panel panel-default">
@@ -528,77 +529,187 @@
 <h2>Law's Order One-Time Grind</h2>
 <p>The next part in the Resistance Weapons questline requires that you complete...</p>
 <div class="row">
-    <!-- The Resistance Remembers Quest -->
-    <div class="col-xs-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <app-quest icon="blue_plus" [isHeading]="true">The Resistance Remembers</app-quest>
-            </div>
-            <div class="panel-body">
-                <div class="alert alert-warning">
-                    This quest is only required to be done one time! DO NOT try to collect more than the listed amount below!
-                  </div>
-                  <img src="../../assets/banners/Resistance5.jpg" alt="" class="quest-banner">
-                  <br>
-
-                  <div class="table-responsive table-50">
-                      <table class="table table-bordered">
-                        <tbody>
-                            <tr>
-                              <th>Quest Giver</th>
-                              <td>Gerolt</td>
-                            </tr>
-                            <tr>
-                              <th>Location</th>
-                              <td>Gangos (x:6.2, y:5.0)</td>
-                            </tr>
-                            <tr>
-                              <th>Previous Quest</th>
-                              <td>
-                                <app-quest icon="blue_plus_repeat">Change of Arms</app-quest>
-                              </td>
-                            </tr>
-                          </tbody>
-                      </table>
-                  </div>
-
-                  <h3>Acquisition</h3>
-                  <div class="table-responsive table-50">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>What to get</th>
-                                <th>How to get</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <app-item icon="Haunting" quantity="18">Haunting Memories of the Dying</app-item>
-                                </td>
-                                <td>
-                                    <p>3 guaranteed from completing any of the alliance raids from the "Shadow of Mhach" series (level-synced).</p>
-                                    <p>1 randomly from FATEs in Gyr Abania zones.</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <app-item icon="Vexatious" quantity="18">Vexatious Memories of the Dying</app-item>
-                                </td>
-                                <td>
-                                    <p>3 guaranteed from completing any of the alliance raids from the "Return to Ivalice" series (level-synced).</p>
-                                    <p>1 randomly from FATEs in Far East zones.</p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3>Turn in</h3>
-                <p>Deliver 18 Haunting Memories of the Dying and 18 Vexatious Memories of the Dying to the Allagan Node in Gangos.</p>
-
-            </div>
+  <!-- The Resistance Remembers Quest -->
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <app-quest icon="blue_plus" [isHeading]="true">The Resistance Remembers</app-quest>
+      </div>
+      <div class="panel-body">
+        <div class="alert alert-warning">
+          This quest is only required to be done one time! DO NOT try to collect more than the listed amount below!
         </div>
+        <img src="../../assets/banners/Resistance5.jpg" alt="" class="quest-banner">
+        <br>
+
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Gerolt</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.2, y:5.0)</td>
+              </tr>
+              <tr>
+                <th>Previous Quest</th>
+                <td>
+                  <app-quest icon="blue_plus_repeat">Change of Arms</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item icon="Haunting" quantity="18">Haunting Memories of the Dying</app-item>
+                </td>
+                <td>
+                  <p>3 guaranteed from completing any of the alliance raids from the "Shadow of Mhach" series
+                    (level-synced).</p>
+                  <p>1 randomly from FATEs in Gyr Abania zones.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <app-item icon="Vexatious" quantity="18">Vexatious Memories of the Dying</app-item>
+                </td>
+                <td>
+                  <p>3 guaranteed from completing any of the alliance raids from the "Return to Ivalice" series
+                    (level-synced).</p>
+                  <p>1 randomly from FATEs in Far East zones.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Turn in</h3>
+        <p>Deliver 18 Haunting Memories of the Dying and 18 Vexatious Memories of the Dying to the Allagan Node in
+          Gangos.</p>
+
+      </div>
     </div>
+  </div>
 </div>
 <hr>
+
+<!-- Step 6 - Augmented Law's Order Weapons -->
+<h2>Augmented Law's Order Weapons (iLvl 515)</h2>
+<p>The next part in the Resistance Weapons questline requires that you complete...</p>
+<div class="row">
+  <!-- A New Path of Resistance Quest -->
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <app-quest icon="blue_plus_repeat" [isHeading]="true">A New Path of Resistance</app-quest>
+      </div>
+      <div class="panel-body">
+        <img src="../../assets/banners/Resistance6.jpg" alt="" class="quest-banner">
+        <br>
+
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Quest Giver</th>
+                <td>Zlatan</td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>Gangos (x:6.1, y:4.9)</td>
+              </tr>
+              <tr>
+                <th>Previous Quest</th>
+                <td>
+                  <app-quest icon="blue_plus">The Resistance Remembers</app-quest>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Acquisition</h3>
+        <div class="table-responsive table-50">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>What to get</th>
+                <th>How to get</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <app-item icon="Timeworn" quantity="15">Timeworn Artifacts</app-item>
+                </td>
+                <td>
+                  <p>3 guaranteed from completing Delubrum Reginae.</p>
+                  <p>1 randomly from completing a set of 10 floors in Palace of the Dead. Tip: It has been found that
+                    the higher the set of floors, the higher the chance for a drop.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Turn in</h3>
+        <p>Deliver the 15 Timeworn Artifacts to Zlatan in Gangos.</p>
+
+        <div class="alert alert-warning">
+          As you turn in your 15 Timeworn Artifacts you will be asked to allocate the stats of your weapon. These stats
+          can be whatever you want them to be as long as you use the number required. If you aren't sure how to allocate
+          your stats refer to the guide below. If you already know what stats you want please ignore the following.
+        </div>
+
+        <h3>Stat Allocation Suggestions</h3>
+        <p>If you aren't sure how to allocate your stats and want a good rule of thumb to follow, then refer to the
+          following info based on the role that your weapon is for:</p>
+        <h4>DPS Jobs</h4>
+        <p>Generally your stat priority should follow the following outline:<br>
+          Critical Hit > Direct Hit > Determination > Skill Speed/Spell Speed</p>
+        <p>Keep in mind that different jobs may want different stats priorities. For example, if you play Black Mage,
+          you may want to take Spell Speed in the place of Critical Hit depending on your playstyle.</p>
+
+        <h4>Healer Jobs</h4>
+        <p>Generally your stat priority should follow the following outline:<br>
+          Critical Hit > Determination > Piety=Spell Speed</p>
+        <p>Keep in mind that your Piety and Spell Speed allocations are based on preference. If you want to go faster,
+          choose Spell Speed. If you need more mana regeneration, choose Piety.</p>
+
+        <h4>Tank Jobs</h4>
+        <p>Generally your stat priority should follow the following outline:<br>
+          Critical Hit > Determination > Tenacity=Skill Speed</p>
+        <p>Keep in mind that your Tenacity and Skill Speed allocations are based on preference. If you want to go
+          faster, choose Skill Speed. If you want a general stat increase, choose Tenacity. Tenacity is a sort of
+          strange stat because of how it scales so most people prefer to use Direct Hit as a stat. But because the Tank
+          weapons don't allow you to allocate Direct Hit as a stat you have to choose something else.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
