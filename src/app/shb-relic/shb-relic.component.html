@@ -1,54 +1,65 @@
 <h1>Shadowbringers Resistance Weapons</h1>
 <p>...Introduction to the details of the resistance weapon quests here...</p>
 
-<div class="col-xs-12 col-sm-4 side-nav">
-    <div class="panel panel-default">
-        <div class="panel-heading">Table of Contents</div>
-        <div class="panel-body">
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#beforeYouBegin" class="nav-link">Before You Begin</a></li>
-                <br>
-                <p>Resistance Weapons (iLvl 485)</p>
-                <li class="list-group-item"><a href="#fireInTheForge">Fire in the Forge</a></li>
-                <li class="list-group-item"><a href="#">Resistance is (Not) Futile</a></li>
-                <li class="list-group-item"><a href="#">Resistance Weapons (iLvl 485)</a></li>
-                <br>
-                <p>Augmented Resistance Weapons (iLvl 500)</p>
-                <li class="list-group-item"><a href="#">For Want of a Memory</a></li>
-            </ul>
-        </div>
+<div class="col-xs-12 col-sm-6 side-nav">
+  <div class="panel panel-default">
+    <div class="panel-heading">Table of Contents</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item"><a href="ShB#beforeYouBegin">Before You Begin</a></li>
+        <li class="list-group-item"><a href="ShB#fireInTheForge">Fire in the Forge</a></li>
+        <li class="list-group-item"><a href="ShB#resistanceIsNotFutile">Resistance is (Not) Futile</a></li>
+        <li class="list-group-item"><a href="ShB#resistanceWeapons">Resistance Weapons (iLvl 485)</a></li>
+        <li class="list-group-item"><a href="ShB#forWantOfAMemory">For Want of a Memory</a></li>
+        <li class="list-group-item"><a href="ShB#augmentedResistanceWeapons">Augmented Resistance Weapons (iLvl 500)</a></li>
+        <li class="list-group-item"><a href="ShB#theWillToResist">The Will to Resist</a></li>
+        <li class="list-group-item"><a href="ShB#recollectionWeapons">Recollection Weapons (iLvl 500)</a></li>
+        <li class="list-group-item"><a href="ShB#changeOfArms">Change of Arms</a></li>
+        <li class="list-group-item"><a href="ShB#lawsOrderWeapons">Law's Order Weapons (iLvl 510)</a></li>
+        <li class="list-group-item"><a href="ShB#theResistanceRemembers">The Resistance Remembers</a></li>
+        <li class="list-group-item"><a href="ShB#aNewPathOfResistance">A New Path of Resistance</a></li>
+
+      </ul>
     </div>
+  </div>
 </div>
-<div class="col-xs-12 col-sm-8">
 
-
+<div class="col-xs-12 col-sm-6" id="beforeYouBegin">
   <!-- Before you Begin -->
   <div class="panel panel-default">
-    <div class="panel-heading"> id="beforeYouBegin">Before You Begin...</div>
+    <div class="panel-heading">Before You Begin...</div>
     <div class="panel-body">
       <p>Before you can begin the grind for your Resistance Weapons, you must complete the following quests for the Main
         Scenario Quests and Side Quests.</p>
 
-      <div class="table-50">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Main Scenario Quest Requirement</th>
-              <th>Side Quest Requirement</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <app-quest icon="msq_quest">Shadowbringers - Lvl 80</app-quest>
-              </td>
-              <td>
-                <app-quest icon="blue_plus">The City of Lost Angels - Lvl 70</app-quest>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Main Scenario Quest Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <app-quest icon="msq_quest">Shadowbringers - Lvl 80</app-quest>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Side Quest Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <app-quest icon="blue_plus">The City of Lost Angels - Lvl 70</app-quest>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <p>The side quest "The City of Lost Angels" is part of a quest chain for the Alliance Raids for Stormblood. You
         must
@@ -57,8 +68,9 @@
         to the Resistance Weapon quests.</p>
     </div>
   </div>
-  <hr>
+</div>
 
+<div class="col-xs-12">
   <!-- Step 1 - Resistance Weapons -->
   <h2>Resistance Weapons (iLvl 485)</h2>
   <p>The first time you reach this part of the questline, you will take on the quest "Fire in the Forge" which only
@@ -69,10 +81,10 @@
     Weapons.</p>
   <div class="row">
     <!-- Fire in the Forge Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="fireInTheForge">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <app-quest icon="blue_plus" [isHeading]="true" id="fireInTheForge">Fire in the Forge</app-quest>
+          <app-quest icon="blue_plus" [isHeading]="true">Fire in the Forge</app-quest>
         </div>
         <div class="panel-body">
           <div class="alert alert-warning">
@@ -134,10 +146,10 @@
       </div>
     </div>
     <!-- Resistance is (Not) Futile Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="resistanceIsNotFutile">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <app-quest icon="blue_plus_repeat" [isHeading]="true" id="resistanceIsNotFutile">Resistance is (Not) Futile</app-quest>
+          <app-quest icon="blue_plus_repeat" [isHeading]="true">Resistance is (Not) Futile</app-quest>
         </div>
         <div class="panel-body">
           <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
@@ -206,9 +218,9 @@
       </div>
     </div>
     <!-- Resistance Weapons iLvl 485 List -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="resistanceWeapons">
       <div class="panel panel-default">
-        <div class="panel-heading" id="resistanceWeapons">Resistance Weapons (iLvl 485)</div>
+        <div class="panel-heading">Resistance Weapons (iLvl 485)</div>
         <div class="panel-body">
           <div class="row">
             <app-weapon icon="Honorbound">Honorbound<br> (PLD)</app-weapon>
@@ -241,7 +253,7 @@
   <p>The next part in the Resistance Weapons questline requires that you complete...</p>
   <div class="row">
     <!-- For Want of a Memory Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="forWantOfAMemory">
       <div class="panel panel-default">
         <div class="panel-heading">
           <app-quest icon="blue_plus_repeat" [isHeading]="true">For Want of a Memory</app-quest>
@@ -324,8 +336,8 @@
         </div>
       </div>
     </div>
-    <!-- Resistance Weapons iLvl 500 List -->
-    <div class="col-xs-12">
+    <!-- Augmented Resistance Weapons iLvl 500 List -->
+    <div class="col-xs-12" id="augmentedResistanceWeapons">
       <div class="panel panel-default">
         <div class="panel-heading">Augmented Resistance Weapons (iLvl 500)</div>
         <div class="panel-body">
@@ -360,7 +372,7 @@
   <p>The next part in the Resistance Weapons questline requires that you complete...</p>
   <div class="row">
     <!-- The Will to Resist Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="theWillToResist">
       <div class="panel panel-default">
         <div class="panel-heading">
           <app-quest icon="blue_plus_repeat" [isHeading]="true">The Will to Resist</app-quest>
@@ -422,7 +434,7 @@
       </div>
     </div>
     <!-- Recollection Weapons iLvl 500 List -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="recollectionWeapons">
       <div class="panel panel-default">
         <div class="panel-heading">Recollection Weapons (iLvl 500)</div>
         <div class="panel-body">
@@ -457,7 +469,7 @@
   <p>The next part in the Resistance Weapons questline requires that you complete...</p>
   <div class="row">
     <!-- Change of Arms Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="changeOfArms">
       <div class="panel panel-default">
         <div class="panel-heading">
           <app-quest icon="blue_plus_repeat" [isHeading]="true">Change of Arms</app-quest>
@@ -523,7 +535,7 @@
     </div>
 
     <!-- Law's Order Weapons - iLvl 510 List -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="lawsOrderWeapons">
       <div class="panel panel-default">
         <div class="panel-heading">Law's Order Weapons (iLvl 510)</div>
         <div class="panel-body">
@@ -558,7 +570,7 @@
   <p>The next part in the Resistance Weapons questline requires that you complete...</p>
   <div class="row">
     <!-- The Resistance Remembers Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="theResistanceRemembers">
       <div class="panel panel-default">
         <div class="panel-heading">
           <app-quest icon="blue_plus" [isHeading]="true">The Resistance Remembers</app-quest>
@@ -640,7 +652,7 @@
   <p>The next part in the Resistance Weapons questline requires that you complete...</p>
   <div class="row">
     <!-- A New Path of Resistance Quest -->
-    <div class="col-xs-12">
+    <div class="col-xs-12" id="aNewPathOfResistance">
       <div class="panel panel-default">
         <div class="panel-heading">
           <app-quest icon="blue_plus_repeat" [isHeading]="true">A New Path of Resistance</app-quest>
