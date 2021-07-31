@@ -9,6 +9,11 @@ img.quest-icon {
 .panel.panel-default .panel-body img.quest-banner {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
+}
+
+.table-50 * {
+    word-wrap: normal;
 }
 
 .table-50 td,
