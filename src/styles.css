@@ -44,3 +44,11 @@ h1, h2, p {
     background-color: #333333;
     color: white;
 }
+
+hr {
+    background-color: #333333;
+}
+
+.btn-toggle {
+    width: 100%;
+}
