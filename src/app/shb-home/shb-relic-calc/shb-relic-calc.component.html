@@ -4,6 +4,15 @@
 <p>Please select the jobs that you want to include in your calculations and the totals will reflect how many of each
   step you need in order to complete those steps.</p>
 
+
+<div class="row button-list">
+  <div class="col-xs-12">
+    <button class="btn btn-primary" (click)="selectAll()">Select all</button>
+    <button class="btn btn-primary" (click)="unselectAll()">Unselect all</button>
+  </div>
+</div>
+<br>
+
 <div class="row job-list">
   <button [ngClass]="{'selected' : isPLD}" (click)="toggleJob('PLD')"><img class="job-icon"
       src="../../../assets/icons/PLD.jpg" alt=""></button>
@@ -42,9 +51,9 @@
 </div>
 <br>
 <div class="row button-list">
-  <button class="btn btn-primary" (click)="selectAll()">Select all</button>
-  <button class="btn btn-primary" (click)="unselectAll()">Unselect all</button>
-  <button class="btn btn-primary" (click)="toggleOneTimeSteps()">Toggle One Time Steps</button>
+  <div class="col-xs-12">
+    <button class="btn btn-primary" (click)="toggleOneTimeSteps()">Toggle One Time Steps</button>
+  </div>
 </div>
 <br>
 
