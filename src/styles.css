@@ -52,3 +52,42 @@ hr {
 .btn-toggle {
     width: 100%;
 }
+
+.centered  {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.job-icon,
+.step-icon {
+    width: 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+.relic-calc-table {
+    text-align: center;
+}
+
+.job-list {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button-list {
+    display: block;
+    text-align: center;
+}
+.button-list button {
+    margin-left: 15px;
+}
+
+.relic-calc-table th,
+.relic-calc-table td {
+    max-width: 5.26%;
+}
+
+.job-list button.selected {
+    background-color: green;
+}

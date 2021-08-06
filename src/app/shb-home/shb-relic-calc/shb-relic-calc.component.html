@@ -1,0 +1,967 @@
+<p>Below is a chart that displays how many of each item you need for however many weapons you want to do. The first step
+  with the Thavnairian Scalepowder has been left out due to complications with the first weapon only needing one. This
+  may be added at a later date but this step is so simple it might not be added at all unless people really want it.</p>
+<p>Please select the jobs that you want to include in your calculations and the totals will reflect how many of each
+  step you need in order to complete those steps.</p>
+
+<div class="row job-list">
+  <button [ngClass]="{'selected' : isPLD}" (click)="toggleJob('PLD')"><img class="job-icon"
+      src="../../../assets/icons/PLD.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isWAR}" (click)="toggleJob('WAR')"><img class="job-icon"
+      src="../../../assets/icons/WAR.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isDRK}" (click)="toggleJob('DRK')"><img class="job-icon"
+      src="../../../assets/icons/DRK.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isGNB}" (click)="toggleJob('GNB')"><img class="job-icon"
+      src="../../../assets/icons/GNB.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isWHM}" (click)="toggleJob('WHM')"><img class="job-icon"
+      src="../../../assets/icons/WHM.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isSCH}" (click)="toggleJob('SCH')"><img class="job-icon"
+      src="../../../assets/icons/SCH.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isAST}" (click)="toggleJob('AST')"><img class="job-icon"
+      src="../../../assets/icons/AST.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isMNK}" (click)="toggleJob('MNK')"><img class="job-icon"
+      src="../../../assets/icons/MNK.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isDRG}" (click)="toggleJob('DRG')"><img class="job-icon"
+      src="../../../assets/icons/DRG.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isNIN}" (click)="toggleJob('NIN')"><img class="job-icon"
+      src="../../../assets/icons/NIN.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isSAM}" (click)="toggleJob('SAM')"><img class="job-icon"
+      src="../../../assets/icons/SAM.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isBRD}" (click)="toggleJob('BRD')"><img class="job-icon"
+      src="../../../assets/icons/BRD.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isMCH}" (click)="toggleJob('MCH')"><img class="job-icon"
+      src="../../../assets/icons/MCH.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isDNC}" (click)="toggleJob('DNC')"><img class="job-icon"
+      src="../../../assets/icons/DNC.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isBLM}" (click)="toggleJob('BLM')"><img class="job-icon"
+      src="../../../assets/icons/BLM.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isSMN}" (click)="toggleJob('SMN')"><img class="job-icon"
+      src="../../../assets/icons/SMN.jpg" alt=""></button>
+  <button [ngClass]="{'selected' : isRDM}" (click)="toggleJob('RDM')"><img class="job-icon"
+      src="../../../assets/icons/RDM.jpg" alt=""></button>
+</div>
+<br>
+<div class="row button-list">
+  <button class="btn btn-primary" (click)="selectAll()">Select all</button>
+  <button class="btn btn-primary" (click)="unselectAll()">Unselect all</button>
+  <button class="btn btn-primary" (click)="toggleOneTimeSteps()">Toggle One Time Steps</button>
+</div>
+<br>
+
+<div class="table-responsive">
+  <table class="table table-bordered relic-calc-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngIf="isPLD"><img class="job-icon" src="../../../assets/icons/PLD.jpg" alt=""></th>
+        <th *ngIf="isWAR"><img class="job-icon" src="../../../assets/icons/WAR.jpg" alt=""></th>
+        <th *ngIf="isDRK"><img class="job-icon" src="../../../assets/icons/DRK.jpg" alt=""></th>
+        <th *ngIf="isGNB"><img class="job-icon" src="../../../assets/icons/GNB.jpg" alt=""></th>
+        <th *ngIf="isWHM"><img class="job-icon" src="../../../assets/icons/WHM.jpg" alt=""></th>
+        <th *ngIf="isSCH"><img class="job-icon" src="../../../assets/icons/SCH.jpg" alt=""></th>
+        <th *ngIf="isAST"><img class="job-icon" src="../../../assets/icons/AST.jpg" alt=""></th>
+        <th *ngIf="isMNK"><img class="job-icon" src="../../../assets/icons/MNK.jpg" alt=""></th>
+        <th *ngIf="isDRG"><img class="job-icon" src="../../../assets/icons/DRG.jpg" alt=""></th>
+        <th *ngIf="isNIN"><img class="job-icon" src="../../../assets/icons/NIN.jpg" alt=""></th>
+        <th *ngIf="isSAM"><img class="job-icon" src="../../../assets/icons/SAM.jpg" alt=""></th>
+        <th *ngIf="isBRD"><img class="job-icon" src="../../../assets/icons/BRD.jpg" alt=""></th>
+        <th *ngIf="isMCH"><img class="job-icon" src="../../../assets/icons/MCH.jpg" alt=""></th>
+        <th *ngIf="isDNC"><img class="job-icon" src="../../../assets/icons/DNC.jpg" alt=""></th>
+        <th *ngIf="isBLM"><img class="job-icon" src="../../../assets/icons/BLM.jpg" alt=""></th>
+        <th *ngIf="isSMN"><img class="job-icon" src="../../../assets/icons/SMN.jpg" alt=""></th>
+        <th *ngIf="isRDM"><img class="job-icon" src="../../../assets/icons/RDM.jpg" alt=""></th>
+        <th>
+          <p>Totals per step</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- Tortured Memories of the Dying -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Tortured.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>20</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>20</p>
+        </td>
+        <td>
+          <p>{{numActive * 20}}</p>
+        </td>
+      </tr>
+
+      <!-- Sorrowful Memories of the Dying -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Sorrowful.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>20</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>20</p>
+        </td>
+        <td>
+          <p>{{numActive * 20}}</p>
+        </td>
+      </tr>
+
+      <!-- Harrowing Memories of the Dying -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Harrowing.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>20</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>20</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>20</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>20</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>20</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>20</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>20</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>20</p>
+        </td>
+        <td>
+          <p>{{numActive * 20}}</p>
+        </td>
+      </tr>
+
+      <!-- Bitter Memories of the Dying -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Bitter.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>6</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>6</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>6</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>6</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>6</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>6</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>6</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>6</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>6</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>6</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>6</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>6</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>6</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>6</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>6</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>6</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>6</p>
+        </td>
+        <td>
+          <p>{{numActive * 6}}</p>
+        </td>
+      </tr>
+
+      <!-- Loathsome Memories of the Dying -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Loathsome.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>15</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>15</p>
+        </td>
+        <td>
+          <p>{{numActive * 15}}</p>
+        </td>
+      </tr>
+
+      <!-- Haunting Memories of the Dying -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Haunting.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>18</p>
+        </td>
+      </tr>
+
+      <!-- Vexatious Memories of the Dying -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Vexatious.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>18</p>
+        </td>
+      </tr>
+
+      <!-- Timeworn Artifacts -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/Timeworn.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>15</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>15</p>
+        </td>
+        <td>
+          <p>{{numActive * 15}}</p>
+        </td>
+      </tr>
+
+      <!-- Compact Axle -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Axle.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- Compact Spring -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Spring.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- A Day in the Life: Beyond the Realm -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Realm.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- A Day in the Life: Beyond the Rift -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Rift.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- Bleak Memories of the Dying -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Bleak.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- Lurid Memories of the Dying -->
+      <tr *ngIf="isOneTimeSteps">
+        <td><img class="step-icon" src="../../../assets/icons/Lurid.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p></p>
+        </td>
+        <td *ngIf="isWAR">
+          <p></p>
+        </td>
+        <td *ngIf="isDRK">
+          <p></p>
+        </td>
+        <td *ngIf="isGNB">
+          <p></p>
+        </td>
+        <td *ngIf="isWHM">
+          <p></p>
+        </td>
+        <td *ngIf="isSCH">
+          <p></p>
+        </td>
+        <td *ngIf="isAST">
+          <p></p>
+        </td>
+        <td *ngIf="isMNK">
+          <p></p>
+        </td>
+        <td *ngIf="isDRG">
+          <p></p>
+        </td>
+        <td *ngIf="isNIN">
+          <p></p>
+        </td>
+        <td *ngIf="isSAM">
+          <p></p>
+        </td>
+        <td *ngIf="isBRD">
+          <p></p>
+        </td>
+        <td *ngIf="isMCH">
+          <p></p>
+        </td>
+        <td *ngIf="isDNC">
+          <p></p>
+        </td>
+        <td *ngIf="isBLM">
+          <p></p>
+        </td>
+        <td *ngIf="isSMN">
+          <p></p>
+        </td>
+        <td *ngIf="isRDM">
+          <p></p>
+        </td>
+        <td>
+          <p>30</p>
+        </td>
+      </tr>
+
+      <!-- Raw Emotions -->
+      <tr>
+        <td><img class="step-icon" src="../../../assets/icons/RawEmotion.jpg" alt=""></td>
+        <td *ngIf="isPLD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWAR">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isGNB">
+          <p>15</p>
+        </td>
+        <td *ngIf="isWHM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isAST">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMNK">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDRG">
+          <p>15</p>
+        </td>
+        <td *ngIf="isNIN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSAM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBRD">
+          <p>15</p>
+        </td>
+        <td *ngIf="isMCH">
+          <p>15</p>
+        </td>
+        <td *ngIf="isDNC">
+          <p>15</p>
+        </td>
+        <td *ngIf="isBLM">
+          <p>15</p>
+        </td>
+        <td *ngIf="isSMN">
+          <p>15</p>
+        </td>
+        <td *ngIf="isRDM">
+          <p>15</p>
+        </td>
+        <td>
+          <p>{{numActive * 15}}</p>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

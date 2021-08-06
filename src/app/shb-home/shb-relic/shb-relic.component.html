@@ -16,6 +16,11 @@
   <div class="panel panel-default">
     <div class="panel-heading">Before You Begin...</div>
     <div class="panel-body">
+      <div class="alert alert-warning">
+        As you progress through each step of a relic weapon, make sure to have a spare weapon to swap to when you
+        upgrade the weapon each time. You cannot have the relic weapon equipped when you turn it in at the end of each
+        quest. This is due to game limitations and cannot be avoided.
+      </div>
       <p>Before you can begin the grind for your Resistance Weapons, you must complete the following quests for the Main
         Scenario Quests and Side Quests.</p>
 
@@ -78,6 +83,7 @@
   </div>
 </div>
 
+
 <div class="col-xs-12">
   <!-- Step 1 - Resistance Weapons -->
   <h2 id="step1">Resistance Weapons (iLvl 485)</h2>
@@ -93,17 +99,17 @@
       Weapons.</p>
     <div class="row">
       <!-- Fire in the Forge Quest -->
-      <div class="col-xs-12">
-        <div class="panel panel-default">
+      <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus" [isHeading]="true">Fire in the Forge</app-quest>
           </div>
           <div class="panel-body">
+            <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
             <div class="alert alert-warning">
               This step only happens once! All additional weapons have to be done through the quest "Resistance is (Not)
               Futile"
             </div>
-            <img class="quest-banner" src="../../assets/banners/Resistance1.jpg" alt="">
             <br>
 
             <div class="table-50">
@@ -158,8 +164,8 @@
         </div>
       </div>
       <!-- Resistance is (Not) Futile Quest -->
-      <div class="col-xs-12">
-        <div class="panel panel-default">
+      <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">Resistance is (Not) Futile</app-quest>
           </div>
@@ -270,7 +276,7 @@
     <div class="row">
       <!-- For Want of a Memory Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">For Want of a Memory</app-quest>
           </div>
@@ -393,7 +399,7 @@
     <div class="row">
       <!-- The Will to Resist Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">The Will to Resist</app-quest>
           </div>
@@ -494,7 +500,7 @@
     <div class="row">
       <!-- Change of Arms Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">Change of Arms</app-quest>
           </div>
@@ -599,7 +605,7 @@
     <div class="row">
       <!-- The Resistance Remembers Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus" [isHeading]="true">The Resistance Remembers</app-quest>
           </div>
@@ -685,7 +691,7 @@
     <div class="row">
       <!-- A New Path of Resistance Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">A New Path of Resistance</app-quest>
           </div>
@@ -829,7 +835,7 @@
     <div class="row">
       <!-- What Dreams Are Made Of Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus" [isHeading]="true">What Dreams Are Made Of</app-quest>
           </div>
@@ -1099,7 +1105,7 @@
     <div class="row">
       <!-- Irresistible Quest -->
       <div class="col-xs-12">
-        <div class="panel panel-default">
+        <div class="panel panel-default panel-quest">
           <div class="panel-heading">
             <app-quest icon="blue_plus_repeat" [isHeading]="true">Irresistible</app-quest>
           </div>
@@ -1241,7 +1247,60 @@
   <button class="btn btn-primary btn-toggle" (click)="onToggleDisplay(9)">Show/Hide</button>
   <br><br>
   <div *ngIf="step9Show">
-      <p>Enter information about stat reallocation quest here.</p>
+    <p>If at any point you need to change the allocation of your weapon's stats you can do that with the Allagan Node in
+      Gangos. This only applies to the Augmented Law's Order Weapons and the Blade's Weapons.</p>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default panel-quest">
+          <div class="panel-heading">
+            <app-quest icon="quest" [isHeading]="true">Forged Anew</app-quest>
+          </div>
+          <div class="panel-body">
+
+            <div class="table-50">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th>Quest Giver</th>
+                    <td>Allagan Node</td>
+                  </tr>
+                  <tr>
+                    <th>Location</th>
+                    <td>Gangos (x:5.9, y:4.8)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Acquisition</h3>
+            <div class="table-50">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>What to get</th>
+                    <th>How to get</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <app-item icon="Sealant" quantity="4">Aetherial Sealant</app-item>
+                    </td>
+                    <td>
+                      <p>Purchased from either of the following vendors for 100 Allagan Tomestone of Poetics each (400
+                        total):</p>
+                      <p>Auriana - Mor Dhona (x:22.7, y:6.6)</p>
+                      <p>Hismena - Idyllshire (x:5.7, y:5.2)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
