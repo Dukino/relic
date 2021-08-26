@@ -6,6 +6,7 @@ import { Component, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./shb-relic.component.css'],
 })
 export class ShbRelicComponent implements OnInit {
+
   @Input() hero: any;
 
   step1Show: boolean = true;

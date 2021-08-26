@@ -13,7 +13,7 @@ import { ItemComponent } from './item/item.component';
 import { ShbRelicComponent } from './shb-home/shb-relic/shb-relic.component';
 import { ShbRelicCalcComponent } from './shb-home/shb-relic-calc/shb-relic-calc.component';
 import { RelicStepComponent } from './relic-step/relic-step.component';
-import { HeroComponent } from './hero/hero.component';
+import { PoeticsVendorsComponent } from './poetics-vendors/poetics-vendors.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { HeroComponent } from './hero/hero.component';
     ShbRelicComponent,
     ShbRelicCalcComponent,
     RelicStepComponent,
-    HeroComponent
+    PoeticsVendorsComponent
   ],
   imports: [
     BrowserModule,

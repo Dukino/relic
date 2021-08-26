@@ -40,6 +40,16 @@ body {
   background-color: var(--jet);
 }
 
+.table-50 th,
+.table-50 td {
+    width: 50%;
+    padding: 10px;
+}
+
+.table-50 * {
+    word-wrap: normal;
+  }
+
 .btn-toggle {
   width: 100%;
 }

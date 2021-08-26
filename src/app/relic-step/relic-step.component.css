@@ -3,6 +3,7 @@
   box-shadow: 11px 11px 15px -12px rgb(0 0 0 / 50%);
   border: 1px solid var(--step-brd);
   color: var(--step-txt);
+  margin-bottom: 25px;
 }
 
 .step * {
@@ -13,7 +14,4 @@
     color: black;
 }
 
-.step-details {
-    
-}
 

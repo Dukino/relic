@@ -24,10 +24,6 @@ img.quest-icon {
   max-width: 100%;
 }
 
-.table-50 * {
-  word-wrap: normal;
-}
-
 .table-50 td,
 .table-50 th {
   width: 50%;
@@ -44,6 +40,10 @@ img.quest-icon {
 .hero-shb {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../../../assets/banners/Gangos.jpg");
+}
+
+.hero-banner-img {
+    max-width: 100%;
 }
 
 .hero-textbox {

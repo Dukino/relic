@@ -18,7 +18,19 @@
             "name": "The Bozja Incident"
           }
         ],
-        "description": "Enter quest description here."
+        "description": "Gerolt looks ready to fire up his forge."
+      },
+      "1": {
+          "quest_id": "1",
+          "icon": "blue_repeat.jpg",
+          "banner": "Resistance1.jpg",
+          "name": "Resistance is (Not) Futile",
+          "quest_giver": "Zlatan",
+          "location": "Gangos (x:6.3, y:5.1)",
+          "previous_quests": [{
+              "name": "Fire in the Forge"
+          }],
+          "description": "Add description later!"
       }
     }
   },
@@ -27,9 +39,32 @@
       "0": {
         "name": "Resistance Weapons - iLvl 485",
         "intro_text": "The first time you reach this part of the questline, you will take on the quest \"Fire in the Forge\" which only occurs once. This quest gives you the materials you need for your first Resistance Weapon for free. After you have completed this quest, the quest \"Resistance is (Not) Futile\" becomes available as a repeatable quest for any additional Resistance Weapons.",
-        "quest": "0",
-        "warning": "This step only happens once! All additional weapons have to be done through the quest \"Resistance is (Not) Futile\" after this step is completed for the first time."
-
+        "quest_id": "0",
+        "warning": "This step only happens once! All additional weapons have to be done through the quest \"Resistance is (Not) Futile\" after this step is completed for the first time.",
+        "acquisition": [
+            {
+                "item_name": "Thavnairian Scalepowder",
+                "quantity": "1",
+                "icon": "scalepowder.jpg",
+                "method": "Given for free through quest."
+            }
+        ],
+        "turn_in": "Deliver 1 Thavnairian Scalepowder to Gerolt in Gangos."
+      },
+      "1": {
+          "name": "Resistance Weapons - iLvl 485 (Additional Weapons)",
+          "intro_text": "Add intro text",
+          "quest_id": "1",
+          "warning": "",
+          "acquisition": [
+              {
+                  "item_name": "Thavnairian Scalepowder",
+                  "quantity": "4",
+                  "icon": "scalepowder.jpg",
+                  "method": "Purchased for 1000 Allagan Tomestones of Poetics (250 each)."
+              }
+          ],
+          "turn_in": "Deliver 4 Thavnairian Scalepowder to Zlatan in Gangos."
       }
     }
   }
