@@ -6,14 +6,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ShbRelicCalcComponent } from './shb-home/shb-relic-calc/shb-relic-calc.component';
 import { ShbRelicComponent } from './shb-home/shb-relic/shb-relic.component';
-import { ShbHomeComponent } from './shb-home/shb-home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'ShB', component: ShbHomeComponent, children: [
-      { path: 'relic', component: ShbRelicComponent },
-      { path: 'calculator', component: ShbRelicCalcComponent }
-  ] }
+  { path: 'ShB', component: ShbRelicComponent }
 ];
 
 @NgModule({

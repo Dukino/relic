@@ -1,0 +1,19 @@
+.step {
+  background-color: var(--step-bg);
+  box-shadow: 11px 11px 15px -12px rgb(0 0 0 / 50%);
+  border: 1px solid var(--step-brd);
+  color: var(--step-txt);
+}
+
+.step * {
+    color: var(--step-txt);
+}
+
+.alert.alert-warning {
+    color: black;
+}
+
+.step-details {
+    
+}
+

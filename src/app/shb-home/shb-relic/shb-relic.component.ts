@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-shb-relic',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shb-relic.component.css'],
 })
 export class ShbRelicComponent implements OnInit {
+  @Input() hero: any;
+
   step1Show: boolean = true;
   step2Show: boolean = true;
   step3Show: boolean = true;
@@ -18,7 +20,9 @@ export class ShbRelicComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+      
+  }
 
   onToggleDisplay(section: number): void {
     switch (section) {

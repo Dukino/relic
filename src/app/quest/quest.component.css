@@ -1,6 +1,18 @@
+.quest-box {
+    color: var(--quest-txt);
+    background-color: var(--quest-bg);
+    border: 5px solid var(--quest-brd);
+    margin-bottom: 15px;
+}
+
 img.quest-icon {
-  height: 25px;
+  height: 35px;
+  margin: 15px;
   width: auto;
+}
+
+.right {
+    float: right;
 }
 
 .quest-heading {
@@ -10,4 +22,19 @@ img.quest-icon {
 .quest-heading img.quest-icon {
   height: 30px;
   width: auto;
+}
+
+.quest-banner {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 5px;
 }

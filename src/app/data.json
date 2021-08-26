@@ -1,0 +1,36 @@
+[{
+  "quests": {
+    "shb": {
+      "0": {
+        "quest_id": "0",
+        "icon": "blue_plus.jpg",
+        "banner": "Resistance1.jpg",
+        "name": "Fire in the Forge",
+        "quest_giver": "Gerolt",
+        "location": "Gangos (x:6.3, y:5.0)",
+        "previous_quests": [{
+            "name": "Hail to the Queen"
+          },
+          {
+            "name": "Path to the Past"
+          },
+          {
+            "name": "The Bozja Incident"
+          }
+        ],
+        "description": "Enter quest description here."
+      }
+    }
+  },
+  "steps": {
+    "shb": {
+      "0": {
+        "name": "Resistance Weapons - iLvl 485",
+        "intro_text": "The first time you reach this part of the questline, you will take on the quest \"Fire in the Forge\" which only occurs once. This quest gives you the materials you need for your first Resistance Weapon for free. After you have completed this quest, the quest \"Resistance is (Not) Futile\" becomes available as a repeatable quest for any additional Resistance Weapons.",
+        "quest": "0",
+        "warning": "This step only happens once! All additional weapons have to be done through the quest \"Resistance is (Not) Futile\" after this step is completed for the first time."
+
+      }
+    }
+  }
+}]

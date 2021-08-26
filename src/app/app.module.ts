@@ -10,9 +10,10 @@ import { WeaponComponent } from './weapon/weapon.component';
 import { ItemComponent } from './item/item.component';
 
 // Shadowbringers
-import { ShbHomeComponent } from './shb-home/shb-home.component';
 import { ShbRelicComponent } from './shb-home/shb-relic/shb-relic.component';
 import { ShbRelicCalcComponent } from './shb-home/shb-relic-calc/shb-relic-calc.component';
+import { RelicStepComponent } from './relic-step/relic-step.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { ShbRelicCalcComponent } from './shb-home/shb-relic-calc/shb-relic-calc.
     QuestComponent,
     WeaponComponent,
     ItemComponent,
-    ShbHomeComponent,
     ShbRelicComponent,
-    ShbRelicCalcComponent
+    ShbRelicCalcComponent,
+    RelicStepComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+
+import * as data from '../data.json';
 
 @Component({
   selector: 'app-quest',
@@ -6,10 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./quest.component.css'],
 })
 export class QuestComponent implements OnInit {
-  @Input() icon: string = '';
-  @Input() isHeading: boolean = false;
+  quests: any = data[0].quests;
+  @Input() quest_id = '';
+  @Input() icon = '';
+  @Input() expac = '';
+  prev_quests: any[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.prev_quests = Object.values(
+      this.quests[this.expac][this.quest_id].previous_quests
+    );
+  }
 }

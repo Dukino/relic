@@ -1,4 +1,44 @@
-<p [ngClass]="{'quest-heading' : isHeading}">
-  <img class="quest-icon" src="../../assets/shared/{{icon}}.jpg" alt="{{icon}} icon">
-  "<ng-content></ng-content>"
-</p>
+<div class="col-xs-12 col-sm-6 quest-box">
+  <div class="row">
+    <div class="col-xs-2 right">
+      <img class="quest-icon" src="../../assets/shared/{{quests[expac][quest_id]?.icon}}" alt="">
+    </div>
+    <div class="col-xs-10">
+      <h3 class="quest-title">{{ quests[expac][quest_id]?.name }}</h3>
+    </div>
+    <div class="col-xs-12">
+      <img class="quest-banner" src="../../assets/banners/{{quests[expac][quest_id]?.banner}}" alt="">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table-bordered">
+        <tbody>
+          <tr>
+            <th>Quest Giver</th>
+            <td>{{quests[expac][quest_id]?.quest_giver}}</td>
+          </tr>
+          <tr>
+            <th>Location</th>
+            <td>{{quests[expac][quest_id]?.location}}</td>
+          </tr>
+          <tr>
+            <th>Previous Quests</th>
+            <td>
+                <p *ngFor="let quest of prev_quests">{{quest?.name}}</p>
+              <!-- {{quests[expac][quest_id]?.previous_quests}} -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="quest-desc">{{quests[expac][quest_id]?.description}}</p>
+    </div>
+  </div>
+</div>
+

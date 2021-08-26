@@ -1,93 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*#region COLORS */
+:root {
+  /* Colors */
+  --purplex11: #991eeb;
+  --smokyblack: #141314;
+  --jet: #373737;
+  --taupegray: #7f7b82;
+  --isabelline: #f5f1ed;
+  --platinum: #e6e6e6;
+  --gold: #a58c5f;
+
+  /* Assigned color variables */
+  --primary: var(--smokyblack);
+  --secondary: var(--jet);
+  --accent: var(--purplex11);
+
+  /* Hero Image colors */
+  --hero-txt: white;
+
+  /* Quest box colors */
+  --quest-bg: var(--isabelline);
+  --quest-txt: black;
+  --quest-brd: var(--gold);
+
+  /* Step colors */
+  --step-bg: var(--smokyblack);
+  --step-txt: white;
+  --step-brd: var(--accent);
+}
+
+/*#endregion*/
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #333333;
-}
-
-body > app-root > .container > .row > div > app-shb-relic > p,
-body > app-root > .container > .row > div > app-shb-relic > h1,
-body > app-root > .container > .row > div > app-shb-relic > h2 {
-    color: white;
-}
-
-h1, h2, p {
-    color: white;
-}
-
-.panel p {
-    color: black;
-}
-
-.side-nav ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-.side-nav li {
-    list-style: none;
-    padding: 0px;
-}
-
-.side-nav a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-}
-
-.side-nav li:hover,
-.side-nav li:hover * {
-    background-color: #333333;
-    color: white;
-}
-
-hr {
-    background-color: #333333;
+  background-color: var(--jet);
 }
 
 .btn-toggle {
-    width: 100%;
+  width: 100%;
 }
 
-.centered  {
-    text-align: center;
-    margin: 0 auto;
+.centered {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .job-icon,
 .step-icon {
-    width: 30px;
-    display: block;
-    margin: 0 auto;
+  width: 30px;
+  display: block;
+  margin: 0 auto;
 }
 
 .relic-calc-table {
-    text-align: center;
+  text-align: center;
 }
 
 .job-list {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .button-list {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 .button-list button {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .relic-calc-table th,
 .relic-calc-table td {
-    max-width: 5.26%;
+  max-width: 5.26%;
 }
 
 .job-list button.selected {
-    background-color: green;
+  background-color: green;
+}
+
+.hero-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 500px;
+  color: var(--hero-txt);
+}
+
+.right {
+    float: right;
 }

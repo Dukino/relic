@@ -1,0 +1,23 @@
+<div class="col-xs-12 step">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>{{steps[step_id]?.name}}</h2>
+      <p>{{steps[step_id]?.intro_text}}</p>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6">
+    <div class="row">
+      <div class="col-xs-12 step-details">
+          <div class="alert alert-warning">
+            {{steps[step_id]?.warning}}
+          </div>
+        <p>***Details Section***</p>
+        <br><br><br><br><br><br>
+      </div>
+    </div>
+
+  </div>
+
+  <app-quest quest_id="{{steps[step_id]?.quest}}" icon="blue_plus" expac="shb"></app-quest>
+
+</div>
