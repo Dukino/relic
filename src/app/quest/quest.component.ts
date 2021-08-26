@@ -16,8 +16,6 @@ export class QuestComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-      console.log("Quest");
-      console.log(this.quests, this.quest_id, this.expac);
     this.prev_quests = Object.values(
       this.quests[this.expac][this.quest_id].previous_quests
     );

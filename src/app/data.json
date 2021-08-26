@@ -21,16 +21,48 @@
         "description": "Gerolt looks ready to fire up his forge."
       },
       "1": {
-          "quest_id": "1",
-          "icon": "blue_repeat.jpg",
-          "banner": "Resistance1.jpg",
-          "name": "Resistance is (Not) Futile",
-          "quest_giver": "Zlatan",
-          "location": "Gangos (x:6.3, y:5.1)",
-          "previous_quests": [{
-              "name": "Fire in the Forge"
-          }],
-          "description": "Add description later!"
+        "quest_id": "1",
+        "icon": "blue_plus_repeat.jpg",
+        "banner": "Resistance1.jpg",
+        "name": "Resistance is (Not) Futile",
+        "quest_giver": "Zlatan",
+        "location": "Gangos (x:6.3, y:5.1)",
+        "previous_quests": [{
+          "name": "Fire in the Forge"
+        }],
+        "description": "Add description later!"
+      },
+      "2": {
+        "quest_id": "2",
+        "icon": "blue_plus_repeat.jpg",
+        "banner": "Resistance2.jpg",
+        "name": "For Want of a Memory",
+        "quest_giver": "Zlatan",
+        "location": "Gangos (x:6.3, y:5.1)",
+        "previous_quests": [{
+            "name": "Vows of Virtue, Deeds of Cruelty"
+          },
+          {
+            "name": "Where Eagles Nest"
+          },
+          {
+            "name": "A Sober Proposal"
+          }
+        ],
+        "description": "Add description later!"
+      },
+      "3": {
+        "quest_id": "3",
+        "icon": "blue_plus_repeat.jpg",
+        "banner": "Resistance3.jpg",
+        "name": "",
+        "quest_giver": "",
+        "location": "",
+        "previous_quests": [{
+            "name": ""
+          }
+        ],
+        "description": ""
       }
     }
   },
@@ -41,30 +73,77 @@
         "intro_text": "The first time you reach this part of the questline, you will take on the quest \"Fire in the Forge\" which only occurs once. This quest gives you the materials you need for your first Resistance Weapon for free. After you have completed this quest, the quest \"Resistance is (Not) Futile\" becomes available as a repeatable quest for any additional Resistance Weapons.",
         "quest_id": "0",
         "warning": "This step only happens once! All additional weapons have to be done through the quest \"Resistance is (Not) Futile\" after this step is completed for the first time.",
-        "acquisition": [
-            {
-                "item_name": "Thavnairian Scalepowder",
-                "quantity": "1",
-                "icon": "scalepowder.jpg",
-                "method": "Given for free through quest."
-            }
-        ],
+        "acquisition": [{
+          "item_name": "Thavnairian Scalepowder",
+          "quantity": "1",
+          "icon": "scalepowder.jpg",
+          "method1": "Given for free through quest.",
+          "method2": "",
+          "method3": ""
+        }],
         "turn_in": "Deliver 1 Thavnairian Scalepowder to Gerolt in Gangos."
       },
       "1": {
-          "name": "Resistance Weapons - iLvl 485 (Additional Weapons)",
-          "intro_text": "Add intro text",
-          "quest_id": "1",
-          "warning": "",
-          "acquisition": [
-              {
-                  "item_name": "Thavnairian Scalepowder",
-                  "quantity": "4",
-                  "icon": "scalepowder.jpg",
-                  "method": "Purchased for 1000 Allagan Tomestones of Poetics (250 each)."
-              }
-          ],
-          "turn_in": "Deliver 4 Thavnairian Scalepowder to Zlatan in Gangos."
+        "name": "Resistance Weapons - iLvl 485 (Additional Weapons)",
+        "intro_text": "Add intro text",
+        "quest_id": "1",
+        "warning": "",
+        "acquisition": [{
+          "item_name": "Thavnairian Scalepowder",
+          "quantity": "4",
+          "icon": "scalepowder.jpg",
+          "method1": "Purchased for 1000 Allagan Tomestones of Poetics (250 each).",
+          "method2": "",
+          "method3": ""
+        }],
+        "turn_in": "Deliver 4 Thavnairian Scalepowder to Zlatan in Gangos."
+      },
+      "2": {
+        "name": "Augmented Resistance Weapons - iLvl 500",
+        "intro_text": "Add intro text",
+        "quest_id": "2",
+        "warning": "",
+        "acquisition": [{
+            "item_name": "Tortured Memory of the Dying",
+            "quantity": "20",
+            "icon": "Tortured.jpg",
+            "method1": "Achieving Gold for FATEs in Coerthas Western Highlands and Sea of Clouds",
+            "method2": "Random drop from Skirmishes, Critical Engagements, and enemies in zone 1 of The Bozjan Southern Front",
+            "method3": ""
+          },
+          {
+            "item_name": "Sorrowful Memory of the Dying",
+            "quantity": "20",
+            "icon": "Sorrowful.jpg",
+            "method1": "Achieving Gold for FATEs in Dravanian Forelands and Churning Mists",
+            "method2": "Random drop from Skirmishes, Critical Engagements, and enemies in zone 2 of The Bozjan Southern Front",
+            "method3": ""
+          },
+          {
+            "item_name": "Harrowing Memory of the Dying",
+            "quantity": "20",
+            "icon": "Harrowing.jpg",
+            "method1": "Achieving Gold for FATEs in Dravanian Hinterlands and Azys Lla",
+            "method2": "Random drop from Skirmishes, Critical Engagements, and enemies in zone 3 of The Bozjan Southern Front",
+            "method3": ""
+          }
+        ],
+        "turn_in": "With your Resistance Weapon in yout inventory, deliver the 60 Memories of the Dying to Zlatan in Gangos."
+      },
+      "": {
+        "name": "",
+        "intro_text": "Add intro text",
+        "quest_id": "",
+        "warning": "",
+        "acquisition": [{
+            "item_name": "",
+            "quantity": "",
+            "method1": "",
+            "method2": "",
+            "method3": ""
+          }
+        ],
+        "turn_in": ""
       }
     }
   }

@@ -1,0 +1,40 @@
+[{
+    "quests": {
+      "shb": {
+        "0": {
+          "quest_id": "",
+          "icon": "",
+          "banner": "",
+          "name": "",
+          "quest_giver": "",
+          "location": "",
+          "previous_quests": [{
+              "name": ""
+            }
+          ],
+          "description": ""
+        }
+      }
+    },
+    "steps": {
+      "shb": {
+        "": {
+          "name": "",
+          "intro_text": "Add intro text",
+          "quest_id": "",
+          "warning": "",
+          "acquisition": [{
+              "item_name": "",
+              "quantity": "",
+              "icon": "",
+              "method1": "",
+              "method2": "",
+              "method3": ""
+            }
+          ],
+          "turn_in": ""
+        }
+      }
+    }
+  }]
+  

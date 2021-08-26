@@ -3,6 +3,7 @@
     background-color: var(--quest-bg);
     border: 5px solid var(--quest-brd);
     margin-bottom: 15px;
+    padding: 0 15px;
 }
 
 img.quest-icon {
