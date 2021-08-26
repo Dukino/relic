@@ -5,16 +5,28 @@
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="#" class="nav-link" [routerLink]="['']">Home</a></li>
-        <li><a href="#" class="nav-link" [routerLink]="['ShB']">Shadowbringers</a></li>
+        <li><a class="nav-link" [routerLink]="['']" (click)="toggleNone()">Home</a></li>
+        <li [ngClass]="{ 'navactive': relics }"><a class="nav-link fake-link" (click)="toggleRelics()">Relic Weapons</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 under-nav">
-
+  <div class="row">
+    <div class="col-xs-12 under-nav" *ngIf="relics">
+      <div class="container">
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a class="nav-link disabled">A Realm Reborn</a></li>
+                <li><a class="nav-link disabled">Heavensward</a></li>
+                <li><a class="nav-link disabled">Stormblood</a></li>
+                <li><a href="#" class="nav-link" [routerLink]="['ShB']">Shadowbringers</a></li>
+            </ul>
         </div>
+      </div>
     </div>
+    <div class="col-xs-12 under-nav" *ngIf="none">
+    </div>
+  </div>
 </div>

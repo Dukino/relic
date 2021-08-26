@@ -13,6 +13,37 @@ nav .nav-link {
 }
 
 .under-nav {
-    height: 25px;
+    height: 35px;
     background-color: var(--accent);
+    text-align: center;
+}
+ 
+.under-nav ul li a {
+    height: 35px;
+    margin: 0px;
+    padding: 7px 10px;
+}
+
+.under-nav ul li a,
+.under-nav ul li a:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.under-nav li:hover,
+.under-nav li.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.fake-link:hover {
+    cursor: pointer;
+}
+
+.navactive {
+    background-color: var(--secondary);
+}
+
+.nav-link.disabled {
+    cursor: not-allowed;
 }

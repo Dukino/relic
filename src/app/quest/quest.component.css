@@ -10,6 +10,7 @@ img.quest-icon {
   height: 35px;
   margin: 15px;
   width: auto;
+  float: right;
 }
 
 .right {
